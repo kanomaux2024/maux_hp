@@ -61,7 +61,7 @@ body {
   }
   
   input[type="text"], input[type="email"], textarea {
-    width: 92%;
+    width: 100%;
     padding: 0.5rem;
     margin-top: 0.5rem;
     border: 1px solid #ccc;
@@ -151,7 +151,11 @@ body {
   
     main {
       padding: 1rem;
-      width: 100%; /* モバイルでは全幅を使用 */
+      width: 90%; /* モバイルでは全幅を使用 */
+    }
+  
+    input[type="text"], input[type="email"], textarea {
+      width: 92%; /* モバイル表示の場合 */
     }
   }
   
