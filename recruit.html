@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会社紹介 - メンバー募集</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <img src="maux_logo01.svg" alt="企業ロゴ" width="200" height="150">
     <nav>
       <ul>
@@ -18,11 +19,11 @@
     </nav>
   </header>
   <main>
-    <section id="recruit-overview">
+    <section id="recruit-overview" data-aos="fade-up">
       <h2>メンバー募集</h2>
       <p>ここに募集概要を記載します。</p>
     </section>
-    <section id="recruit-details">
+    <section id="recruit-details" data-aos="fade-up" data-aos-delay="100">
       <h2>募集要項</h2>
       <ul>
         <li>職種: ソフトウェアエンジニア</li>
@@ -32,22 +33,26 @@
         <li>応募資格: 開発経験3年以上</li>
       </ul>
     </section>
-    <section id="recruit-form">
+    <section id="recruit-form" data-aos="fade-up" data-aos-delay="200">
       <h2>応募フォーム</h2>
-      <form action="submit_recruit.php" method="post">
-        <label for="name">お名前:</label>
-        <input type="text" id="name" name="name" required><br>
-        <label for="email">メールアドレス:</label>
-        <input type="email" id="email" name="email" required><br>
-        <label for="message">メッセージ:</label>
-        <textarea id="message" name="message" required></textarea><br>
+      <form onsubmit="sendRecruitMail(); return false;">
+        <label for="recruit-name">お名前:</label>
+        <input type="text" id="recruit-name" name="name" required><br>
+        <label for="recruit-email">メールアドレス:</label>
+        <input type="email" id="recruit-email" name="email" required><br>
+        <label for="recruit-message">メッセージ:</label>
+        <textarea id="recruit-message" name="message" required></textarea><br>
         <input type="submit" value="送信">
       </form>
     </section>
   </main>
-  <footer>
+  <footer data-aos="fade-up" data-aos-delay="300">
     <p>© 2024 MaUX合同会社. All rights reserved.</p>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="scripts.js"></script>
 </body>
 </html>
