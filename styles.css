@@ -18,6 +18,11 @@ body {
     text-align: center;
   }
   
+  header .logo {
+    max-width: 50%;
+    height: auto;
+  }
+  
   nav ul {
     list-style: none;
     padding: 0;
