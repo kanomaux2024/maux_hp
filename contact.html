@@ -20,7 +20,7 @@
   <main>
     <section id="contact-form">
       <h2>お問い合わせフォーム</h2>
-      <form action="submit_contact.php" method="post">
+      <form onsubmit="sendMail(); return false;">
         <label for="name">お名前:</label>
         <input type="text" id="name" name="name" required><br>
         <label for="email">メールアドレス:</label>
