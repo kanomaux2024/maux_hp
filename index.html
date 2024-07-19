@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会社紹介 - TOP</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <img src="maux_logo01.svg" alt="企業ロゴ" width="200" height="150">
     <nav>
       <ul>
@@ -18,17 +19,17 @@
     </nav>
   </header>
   <main>
-    <section id="company-logo" class="slideshow-container">
-      <img src="img/top01.png" class="slides active" alt="スライド1">
+    <section id="company-logo" class="slideshow-container" data-aos="fade-up">
+      <img src="img/" class="slides active" alt="スライド1">
       <img src="img/top02.png" class="slides" alt="スライド2">
       <img src="img/top03.png" class="slides" alt="スライド3">
       <img src="img/top04.png" class="slides" alt="スライド4">
     </section>
-    <section id="philosophy">
+    <section id="philosophy" data-aos="fade-up">
       <h2>企業理念</h2>
       <p>MaUX合同会社は、顧客のニーズに応じた最適なユーザーエクスペリエンスを提供することを使命としています。革新的な技術とクリエイティブな発想を融合させ、社会に貢献し続ける企業を目指します。</p>
     </section>
-    <section id="company-info">
+    <section id="company-info" data-aos="fade-up" data-aos-delay="100">
       <h2>会社概要</h2>
       <ul>
         <li><strong>会社名:</strong> MaUX合同会社</li>
@@ -40,7 +41,7 @@
         <li><strong>設立:</strong> 2023年9月</li>
       </ul>
     </section>
-    <section id="business">
+    <section id="business" data-aos="fade-up" data-aos-delay="200">
       <h2>事業内容</h2>
       <p>MaUX合同会社は、以下の分野で事業を展開しています。</p>
       <ul>
@@ -51,13 +52,17 @@
       </ul>
     </section>
     <!-- Google Map 埋め込み -->
-    <div id="map">
+    <div id="map" data-aos="fade-up" data-aos-delay="300">
       <iframe src="https://maps.google.com/maps?q=〒104-0061 東京都中央区銀座1-12-4 N&E BLD.7階&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
     </div>
   </main>
-  <footer>
+  <footer data-aos="fade-up" data-aos-delay="400">
     <p>© 2024 MaUX合同会社. All rights reserved.</p>
   </footer>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.js"></script>
+  <script>
+    AOS.init();
+  </script>
   <script src="scripts.js"></script>
 </body>
 </html>

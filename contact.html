@@ -5,9 +5,10 @@
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
   <title>会社紹介 - お問い合わせ</title>
   <link rel="stylesheet" href="styles.css">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/aos/2.3.4/aos.css">
 </head>
 <body>
-  <header>
+  <header data-aos="fade-down">
     <img src="maux_logo01.svg" alt="企業ロゴ" width="200" height="150">
     <nav>
       <ul>
@@ -18,7 +19,7 @@
     </nav>
   </header>
   <main>
-    <section id="contact-form">
+    <section id="contact-form" data-aos="fade-up">
       <h2>お問い合わせフォーム</h2>
       <form onsubmit="sendMail(); return false;">
         <label for="name">お名前:</label>
@@ -26,14 +27,4 @@
         <label for="email">メールアドレス:</label>
         <input type="email" id="email" name="email" required><br>
         <label for="message">メッセージ:</label>
-        <textarea id="message" name="message" required></textarea><br>
-        <input type="submit" value="送信">
-      </form>
-    </section>
-  </main>
-  <footer>
-    <p>© 2024 MaUX合同会社. All rights reserved.</p>
-  </footer>
-  <script src="scripts.js"></script>
-</body>
-</html>
+        <textarea id="message" name="message" required
