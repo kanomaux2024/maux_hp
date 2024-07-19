@@ -8,7 +8,7 @@
 </head>
 <body>
   <header>
-    <h1>会社名</h1>
+    <img src="maux_logo01.svg" alt="企業ロゴ" width="200" height="150">
     <nav>
       <ul>
         <li><a href="index.html">ホーム</a></li>
@@ -18,29 +18,46 @@
     </nav>
   </header>
   <main>
-    <section id="company-logo">
-      <img src="logo.png" alt="企業ロゴ">
+    <section id="company-logo" class="slideshow-container">
+      <img src="img/top01.png" class="slides active" alt="スライド1">
+      <img src="img/top02.png" class="slides" alt="スライド2">
+      <img src="img/top03.png" class="slides" alt="スライド3">
+      <img src="img/top04.png" class="slides" alt="スライド4">
     </section>
     <section id="philosophy">
       <h2>企業理念</h2>
-      <p>ここに企業理念を記載します。</p>
+      <p>MaUX合同会社は、顧客のニーズに応じた最適なユーザーエクスペリエンスを提供することを使命としています。革新的な技術とクリエイティブな発想を融合させ、社会に貢献し続ける企業を目指します。</p>
     </section>
     <section id="company-info">
       <h2>会社概要</h2>
       <ul>
-        <li><strong>取締役社長:</strong> 山田 太郎</li>
-        <li><strong>TEL:</strong> 03-1234-5678</li>
-        <li><strong>設立:</strong> 2024年1月1日</li>
-        <li><strong>本社所在地:</strong> 東京都千代田区1-1-1</li>
+        <li><strong>会社名:</strong> MaUX合同会社</li>
+        <li><strong>業務執行/代表社員:</strong> 宝生 優羽（ほうしょう ゆう）</li>
+        <li><strong>本社所在地:</strong><br>
+          〒104-0061<br>
+          東京都中央区銀座1-12-4 N&E BLD.7階</li>
+        <li><strong>メール:</strong> <a href="mailto:info@maux.jp">info@maux.jp</a></li>
+        <li><strong>設立:</strong> 2023年9月</li>
       </ul>
     </section>
     <section id="business">
       <h2>事業内容</h2>
-      <p>ここに事業内容を記載します。</p>
+      <p>MaUX合同会社は、以下の分野で事業を展開しています。</p>
+      <ul>
+        <li>ユーザーエクスペリエンス（UX）コンサルティング</li>
+        <li>Webデザインおよび開発</li>
+        <li>デジタルマーケティング</li>
+        <li>教育およびトレーニング</li>
+      </ul>
     </section>
+    <!-- Google Map 埋め込み -->
+    <div id="map">
+      <iframe src="https://maps.google.com/maps?q=〒104-0061 東京都中央区銀座1-12-4 N&E BLD.7階&t=&z=13&ie=UTF8&iwloc=&output=embed" frameborder="0" scrolling="no" marginheight="0" marginwidth="0"></iframe>
+    </div>
   </main>
   <footer>
-    <p>© 2024 会社名. All rights reserved.</p>
+    <p>© 2024 MaUX合同会社. All rights reserved.</p>
   </footer>
+  <script src="scripts.js"></script>
 </body>
 </html>
