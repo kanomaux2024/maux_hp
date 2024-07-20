@@ -21,27 +21,64 @@
   <main>
     <section id="recruit-overview" data-aos="fade-up">
       <h2>メンバー募集</h2>
-      <p>ここに募集概要を記載します。</p>
+      <p>MaUX合同会社では当社初となるアイドルグループ「Brain Beet」「大盛無料」の2グループ同時募集を行います。それぞれコンセプトの違うアイドルグループとしてメンバー各々の個性を最大限に生かせるようプロヂュースいたします。完全新規グループなので1から積み上げていく楽しさ、達成感があります◎</p>
+      <p>歌やダンスの自信のある方！<br>
+      アイドルに憧れがある方！<br>
+      人を楽しませることが好きな方！<br>
+      何事にも積極的に全力で取り組んでくれる方大歓迎！</p>
     </section>
     <section id="recruit-details" data-aos="fade-up" data-aos-delay="100">
       <h2>募集要項</h2>
       <ul>
-        <li>職種: ソフトウェアエンジニア</li>
-        <li>勤務地: 東京都千代田区</li>
-        <li>給与: 月給30万円～</li>
-        <li>勤務時間: 9:00〜18:00</li>
-        <li>応募資格: 開発経験3年以上</li>
+        <li>18歳～28歳の心身ともに健康な女性（経験者は年齢不問）</li>
+        <li>主な活動拠点は、都内近郊のため都内へ通える方</li>
+        <li>「土日祝祭日の終日」「平日2〜3日 16:00以降」のスケジュールに対応可能であること</li>
+        <li>アイドルとしてステージに立ちたい方</li>
+        <li>過去に芸能事務所等へ所属していた場合、契約解除通知必須</li>
       </ul>
     </section>
-    <section id="recruit-form" data-aos="fade-up" data-aos-delay="200">
+    <section id="faq" data-aos="fade-up" data-aos-delay="200">
+      <h2>よくある質問</h2>
+      <dl>
+        <dt>Q.ダンスや歌が苦手でも大丈夫ですか？</dt>
+        <dd>A.実績のあるプロのダンサーのもと、しっかりと基礎レッスンから行いますので心配ありません。</dd>
+        <dt>Q.学生ですが大丈夫ですか？</dt>
+        <dd>A.スケジュール感としては、土日祝祭日と平日15時以降に1〜2日のライブ活動になります。このスケジュール感に支障がなければ、問題ございません。</dd>
+        <dt>Q.未成年ですが大丈夫ですか？</dt>
+        <dd>A.親権者（ご両親、または法的なあなたの保護者）の同意があれば問題ございません。なお契約の際、未成年は親権者の方のサインが必要になります。</dd>
+      </dl>
+    </section>
+    <section id="recruit-form" data-aos="fade-up" data-aos-delay="300">
       <h2>応募フォーム</h2>
+      <p>下記情報を記載し、メールフォームよりご応募ください。</p>
       <form onsubmit="sendRecruitMail(); return false;">
         <label for="recruit-name">お名前:</label>
         <input type="text" id="recruit-name" name="name" required><br>
+        <label for="recruit-age">年齢:</label>
+        <input type="text" id="recruit-age" name="age" required><br>
         <label for="recruit-email">メールアドレス:</label>
         <input type="email" id="recruit-email" name="email" required><br>
-        <label for="recruit-message">メッセージ:</label>
-        <textarea id="recruit-message" name="message" required></textarea><br>
+        <label for="recruit-phone">携帯番号:</label>
+        <input type="text" id="recruit-phone" name="phone" required><br>
+        <label for="recruit-address">住所:</label>
+        <input type="text" id="recruit-address" name="address" required><br>
+        <label for="recruit-motivation">志望動機:</label>
+        <textarea id="recruit-motivation" name="motivation" required></textarea><br>
+        <label for="recruit-height">身長:</label>
+        <input type="text" id="recruit-height" name="height" required><br>
+        <label for="recruit-weight">体重:</label>
+        <input type="text" id="recruit-weight" name="weight" required><br>
+        <label for="recruit-photo-full">写真（全身）:</label>
+        <input type="file" id="recruit-photo-full" name="photo-full" accept="image/*" required><br>
+        <label for="recruit-photo-face-processed">写真（顔・加工済み）:</label>
+        <input type="file" id="recruit-photo-face-processed" name="photo-face-processed" accept="image/*" required><br>
+        <label for="recruit-photo-face-unprocessed">写真（顔・無加工）:</label>
+        <input type="file" id="recruit-photo-face-unprocessed" name="photo-face-unprocessed" accept="image/*" required><br>
+        <p>以下の項目は該当の物があれば合わせてご記載ください。必須ではありませんが自己PRとして評価させていただきます。</p>
+        <label for="recruit-sns">お使いの全てのSNSのURL（X、Instagram、tiktok等）:</label>
+        <textarea id="recruit-sns" name="sns"></textarea><br>
+        <label for="recruit-video">歌っている様子やダンス能力が分かる動画（部屋撮り・カラオケ撮りどんな物でも構いません）:</label>
+        <input type="file" id="recruit-video" name="video" accept="video/*"><br>
         <input type="submit" value="送信">
       </form>
     </section>

@@ -14,13 +14,26 @@ function sendMail() {
 // メール送信機能（メンバー募集）
 function sendRecruitMail() {
   var name = document.getElementById('recruit-name').value;
+  var age = document.getElementById('recruit-age').value;
   var email = document.getElementById('recruit-email').value;
-  var message = document.getElementById('recruit-message').value;
+  var phone = document.getElementById('recruit-phone').value;
+  var address = document.getElementById('recruit-address').value;
+  var motivation = document.getElementById('recruit-motivation').value;
+  var height = document.getElementById('recruit-height').value;
+  var weight = document.getElementById('recruit-weight').value;
+  var sns = document.getElementById('recruit-sns').value;
+
   var subject = "メンバー募集応募";
-  var body = "お名前: " + name + "%0A" + 
-             "メールアドレス: " + email + "%0A" + 
-             "メッセージ: " + message;
-  
+  var body = "お名前: " + name + "%0A" +
+             "年齢: " + age + "%0A" +
+             "メールアドレス: " + email + "%0A" +
+             "携帯番号: " + phone + "%0A" +
+             "住所: " + address + "%0A" +
+             "志望動機: " + motivation + "%0A" +
+             "身長: " + height + "%0A" +
+             "体重: " + weight + "%0A" +
+             "SNS: " + sns;
+
   window.location.href = "mailto:your_email@example.com?subject=" + subject + "&body=" + body;
 }
 
