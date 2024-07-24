@@ -62,3 +62,25 @@ function showSlides() {
 
   setTimeout(showSlides, 6000); // 6秒ごとに次の画像に切り替え
 }
+
+document.addEventListener('DOMContentLoaded', () => {
+  const hamburgerMenu = document.querySelector('.hamburger-menu');
+  const navLinks = document.querySelector('.nav-links');
+
+  hamburgerMenu.addEventListener('click', () => {
+    navLinks.classList.toggle('active');
+  });
+});
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const currentLocation = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split("/").pop();
+    if (linkPath === currentLocation) {
+      link.classList.add('active');
+    }
+  });
+});
