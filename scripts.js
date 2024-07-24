@@ -71,3 +71,16 @@ document.addEventListener('DOMContentLoaded', () => {
     navLinks.classList.toggle('active');
   });
 });
+
+
+document.addEventListener('DOMContentLoaded', () => {
+  const currentLocation = window.location.pathname.split("/").pop();
+  const navLinks = document.querySelectorAll('nav ul li a');
+
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split("/").pop();
+    if (linkPath === currentLocation) {
+      link.classList.add('active');
+    }
+  });
+});
