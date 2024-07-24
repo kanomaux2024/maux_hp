@@ -74,3 +74,32 @@ document.addEventListener('DOMContentLoaded', () => {
     }
   });
 });
+
+document.addEventListener('DOMContentLoaded', () => {
+  // 現在のページのパスを取得してactiveクラスを設定
+  const currentPath = window.location.pathname.split('/').pop();
+  const navLinks = document.querySelectorAll('nav ul li a');
+  navLinks.forEach(link => {
+    const linkPath = link.getAttribute('href').split('/').pop();
+    if (linkPath === currentPath) {
+      link.classList.add('active');
+    }
+  });
+
+  // スクロールボタンの動作を設定
+  const scrollToTopBtn = document.getElementById('scrollToTopBtn');
+  window.onscroll = function() {
+    if (document.body.scrollTop > 100 || document.documentElement.scrollTop > 100) {
+      scrollToTopBtn.classList.add('show'); // ボタン表示
+    } else {
+      scrollToTopBtn.classList.remove('show'); // ボタン非表示
+    }
+  };
+
+  scrollToTopBtn.addEventListener('click', () => {
+    window.scrollTo({
+      top: 0,
+      behavior: 'smooth'
+    });
+  });
+});
