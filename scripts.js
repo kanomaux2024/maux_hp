@@ -8,34 +8,50 @@ function sendMail() {
              "メールアドレス: " + email + "%0A" + 
              "メッセージ: " + message;
   
-  window.location.href = "mailto:your_email@example.com?subject=" + subject + "&body=" + body;
+  window.location.href = "mailto:info@maux.jp?subject=" + subject + "&body=" + body;
 }
 
 // メール送信機能（メンバー募集）
-function sendRecruitMail() {
-  var name = document.getElementById('recruit-name').value;
-  var age = document.getElementById('recruit-age').value;
-  var email = document.getElementById('recruit-email').value;
-  var phone = document.getElementById('recruit-phone').value;
-  var address = document.getElementById('recruit-address').value;
-  var motivation = document.getElementById('recruit-motivation').value;
-  var height = document.getElementById('recruit-height').value;
-  var weight = document.getElementById('recruit-weight').value;
-  var sns = document.getElementById('recruit-sns').value;
+function createMail() {
+  // フォームのデータを取得
+  const name = document.getElementById('recruit-name').value;
+  const age = document.getElementById('recruit-age').value;
+  const email = document.getElementById('recruit-email').value;
+  const phone = document.getElementById('recruit-phone').value;
+  const address = document.getElementById('recruit-address').value;
+  const motivation = document.getElementById('recruit-motivation').value;
+  const height = document.getElementById('recruit-height').value;
+  const weight = document.getElementById('recruit-weight').value;
+  const sns = document.getElementById('recruit-sns').value;
+  const video = document.getElementById('recruit-video').value;
 
-  var subject = "メンバー募集応募";
-  var body = "お名前: " + name + "%0A" +
-             "年齢: " + age + "%0A" +
-             "メールアドレス: " + email + "%0A" +
-             "携帯番号: " + phone + "%0A" +
-             "住所: " + address + "%0A" +
-             "志望動機: " + motivation + "%0A" +
-             "身長: " + height + "%0A" +
-             "体重: " + weight + "%0A" +
-             "SNS: " + sns;
+  // メール本文を作成
+  const mailBody = `
+    お名前: ${name}\n
+    年齢: ${age}\n
+    メールアドレス: ${email}\n
+    携帯番号: ${phone}\n
+    住所: ${address}\n
+    志望動機: ${motivation}\n
+    身長: ${height}\n
+    体重: ${weight}\n
+    SNSのURL: ${sns}\n
+    動画リンク: ${video}\n
+    \n
+    ※お手数ですが、以下の写真3枚と動画をメールに添付して送信してください。\n
+    - 全身写真\n
+    - 顔写真（加工済み）\n
+    - 顔写真（無加工）\n
+    - 歌っている様子やダンス能力が分かる動画(リンクが無い場合)\n
+  `;
 
-  window.location.href = "mailto:your_email@example.com?subject=" + subject + "&body=" + body;
+  // メーラーでメールを作成するリンクを生成
+  const mailtoLink = `mailto:nfo@maux.jp?subject=新規応募&body=${encodeURIComponent(mailBody)}`;
+  window.location.href = mailtoLink;
+
+  return false; // フォームのデフォルトの送信を防ぐ
 }
+
 
 // スライドショー機能
 let slideIndex = 0;
