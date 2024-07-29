@@ -99,6 +99,11 @@ body {
   input[type="submit"]:hover {
     background-color: #d75488;
   }
+
+  /* pタグのマージンを特定のクラスに対して設定 */
+  .p-no-margin {
+    margin-top: 0;
+  }
   
   /* トップ画像のスタイル */
   .slideshow-container {
